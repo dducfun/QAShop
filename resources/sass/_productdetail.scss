@@ -1,0 +1,182 @@
+.product__details__text {
+    .product__details__option {
+        position: relative;
+        .product__details__option__color {
+            position: absolute;
+            top: 5px;
+        }
+    }
+}
+.product__details__option__color label.product-color {
+    display: none;
+    &.show {
+        display: inline-block;
+    }
+    &.show.active {
+        &:after {
+            border: 1px solid black !important;
+        }
+    }
+}
+
+.container {
+    .product__details__text {
+        .product__details__option{
+            display: flex;
+            justify-content: center;
+            position: unset;
+            .product__details__option__color {
+                display: flex;
+                align-items: center;
+                position: unset;
+                span {
+                    top: unset;
+                    position: unset;
+                }
+            }
+        }
+    }
+}
+.product__details__text {
+    .discount-price, .price {
+        font-size: 25px;
+    }
+    .original-price {
+        font-size: 20px;
+    }
+}
+.silder-product-related.owl-carousel .owl-nav button {
+    font-size: 36px;
+    color: #333333;
+    position: absolute;
+    left: 75px;
+    top: 40%;
+    margin-top: -18px;
+    line-height: 29px;
+}
+
+.silder-product-related.owl-carousel .owl-nav button.owl-next {
+    left: auto;
+    right: 75px;
+}
+.silder-product-related.owl-carousel .owl-nav button {
+    left: 2px;
+}
+.silder-product-related.owl-carousel .owl-nav button.owl-next {
+    right: 2px;
+}
+.silder-product-related.owl-carousel .owl-nav button {
+    left: 15px;
+}
+.silder-product-related.owl-carousel .owl-nav button.owl-next {
+    left: auto;
+    right: 0;
+}
+.review {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product__details__tab__content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.review .avatar img {
+    border-radius: 50%;
+}
+
+.avatar {
+    padding-right: 40px;
+}
+
+.information .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.information .user .name-user {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.information {
+    width: 100%;
+}
+
+.commtent-product {
+    color: #ada8a8;
+}
+.review-user {
+    display: grid;
+}
+.review-user .comment {
+    display: grid;
+}
+.review {
+    height: 100px;
+}
+.add-review .title {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+.review-user button.btn.submit-comment {
+    width: 100px;
+    margin: auto;
+    color: white;
+    background: black;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.rate-user {
+    display: flex;
+    align-items: center;
+}
+.shop-details {
+    .tab-content {
+       .product__details__pic__item {
+           img {
+               height: 530px;
+           }
+       }
+    }
+}
+
+#rating{
+    border:none;float:left;
+}
+/*ẩn input radio - vì chúng ta đã có label là GUI*/
+#rating>input{
+    display:none;
+}
+/*1 ngôi sao*/
+#rating>label:before{
+    margin:5px;
+    font-size:14px;
+    display:inline-block;
+    font-family:FontAwesome;
+    content:"\f005";
+}
+/*float:right để lật ngược các ngôi sao lại đúng theo thứ tự trong thực tế*/
+#rating>label{
+    color:#ddd;
+    float:right;
+}
+/*thêm màu cho sao đã chọn và các ngôi sao phía trước*/
+#rating>input:checked~label,
+#rating:not(:checked)>label:hover,
+#rating:not(:checked)>label:hover~label{
+    color:#f7941d;
+}
+/* Hover vào các sao phía trước ngôi sao đã chọn*/
+#rating>input:checked+label:hover,
+#rating>input:checked~label:hover,
+#rating>label:hover~input:checked~label,
+#rating>input:checked~label:hover~label{
+    color:#f7941d;
+}
+#add-cart[disabled = 'disabled'] {
+    opacity: 0.5;
+}
